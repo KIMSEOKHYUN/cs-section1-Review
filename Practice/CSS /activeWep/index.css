@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #303f9f;
+  align-items: center;
+  height: 6rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav > div {
+  padding: 0.4rem;
+  color: aliceblue;
+}
+
+.fas {
+  font-size: 30px;
+}
+
+.fa-seedling {
+  font-size: 40px;
+}
+
+button {
+  font-size: 20px;
+  background-color: transparent;
+}
+
+span {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
