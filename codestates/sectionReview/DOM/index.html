@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Review</title>
+    <meta charset="UTF-8" />
+    <script>
+      /* const contrySpan = document.createElement('span')
+      const cityBox = document.createElement('div')
+      const citySpan = document.createElement('span')
+      const addressSpan = document.createElement('span') */
+    
+      
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <ul class="city-list"></ul>
+    </div>
+  </body>
+  <script>
+    const places = [
+        {
+          id: 1,
+          city: "Biloxi",
+          country: "United States",
+          address: "Walton"
+        },
+        {
+          id: 2,
+          city: "Carmen de Viboral",
+          country: "Colombia",
+          address: "Drewry"
+        },
+        {
+          id: 3,
+          city: "New Mīrpur",
+          country: "Pakistan",
+          address: "Morningstar"
+        },
+        {
+          id: 4,
+          city: "Seropédica",
+          country: "Brazil",
+          address: "Parkside"
+        },
+        {
+          id: 5,
+          city: "Ponjen",
+          country: "Indonesia",
+          address: "Gina"
+        }
+      ];
+    
+    //for(let i = 0; i < places.length; i++) {
+    //for(let place of places)
+    places.map(place => {
+        
+        const li = document.createElement('li')
+        const elCityList = document.querySelector('.city-list')
+        elCityList.append(li);
+
+        const span1 = document.createElement('span');
+        span1.classList.add('country');
+        span1.textContent = place.country
+        const div = document.createElement('div');
+        li.append(span1, div);
+    
+        const span2 = document.createElement('span')
+        span2.classList.add('city');
+        span2.textContent = 'City : ' + place.city
+        const span3 = document.createElement('span')
+        span3.classList.add('address');
+        span3.textContent = 'Address : ' + place.address
+        div.append(span2, span3);
+        
+
+    })
+
+    // 왜 for만되고 map으로는 불가능한 것일까? -> 와씨..된다.. return을 사용하면 안되는 것이었어...ㅠㅠ
+    // 'for of'는 가능할까? -> 이건 가능
+     
+        // element tag를 만든다. (li, div, span)
+        // 해당 엘레멘트들에 내용을 추가한다
+        // 삽입하려는 부모 엘리먼트를 선택해서 가져온다.
+        // 부모 엘리먼트에 새 엘리먼트 li를 추가한다.
+    
+    /* document.querySelector('.country').innerHTML = place.city
+        document.querySelector('.city').innerHTML = place.country
+        document.querySelector('.address').innerHTML = place.address*/
+
+  </script>
+  <style>
+      ul {
+          list-style: none;
+      }
+
+      .country {
+          font-weight: bold;
+      }
+
+      .address {
+          display: block;
+          margin-bottom: 20px;
+      }
+
+
+  </style>
+</html>
+<!-- <li>
+  <span class="country">United States</span>
+  <div class="city">City : Biloxi</span>
+  <div class="address">Address : Walton</span>
+</li> -->
